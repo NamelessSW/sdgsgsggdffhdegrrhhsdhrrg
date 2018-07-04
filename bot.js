@@ -28,4 +28,38 @@ client.user.setGame(`Playing`,"#help")
   console.log('')
 });
 
+ client.on('ready',  () => {
+    console.log('By : _xShaDowZx');
+    console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
+    console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
+    console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
+  }); 
+  
+  client.on('ready', () => {
+     console.log(`----------------`);
+        console.log(`Made By _xShaDowZx - Script By : _xShaDowZx`);
+          console.log(`----------------`);
+        console.log(`ON ${client.guilds.size} Servers '     Script By : _xShaDowZx ' `);
+      console.log(`----------------`);
+    console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setActivity(` ON ${client.guilds.size} Servers - Prefix #help`,"Type #help")
+  client.user.setStatus("Online")
+  });
+  client.on("guildCreate", guild => {
+    console.log(` Join Bot Of Server ${guild.name} Owner Of Server ${guild.owner.user.username}!`)
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
