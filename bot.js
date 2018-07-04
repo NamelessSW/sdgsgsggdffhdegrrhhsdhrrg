@@ -89,7 +89,7 @@ if (msg.content.startsWith(`#report`)) {
 
 //Suggestions 
 client.on('message', msg => { 
-if (msg.content.startsWith(`#report`)) {
+if (msg.content.startsWith(`#sug`)) {
 
    let args = msg.content.split(" ").slice(1);
 
