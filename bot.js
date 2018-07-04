@@ -333,7 +333,12 @@ client.on("message", message => {
 }
 });
 
-
+client.on('message', message => {
+    if (message.author.id === client.user.id) return;
+            if (message.content.startsWith(prefix + "ping")) {
+        message.channel.sendMessage(':ping_pong: Pong! In `' + `${client.ping}` + ' ms`');
+    }
+});
 
 
 
