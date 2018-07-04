@@ -42,78 +42,12 @@ client.user.setGame(`Playing`,"#help")
         console.log(`ON ${client.guilds.size} Servers '     Script By : _xShaDowZx ' `);
       console.log(`----------------`);
     console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity(` ON ${client.guilds.size} Servers - Prefix #help`,"Type #help")
+  client.user.setActivity(` ON ${client.guilds.size} Servers - Server Maker`,"#")
   client.user.setStatus("Online")
   });
   client.on("guildCreate", guild => {
     console.log(` Join Bot Of Server ${guild.name} Owner Of Server ${guild.owner.user.username}!`)
   });
-
-//warn 
-client.on('message', msg => { 
-    if (msg.content.startsWith('#warn')) {
-      if(!msg.member.hasPermission("MUTE_MEMBERS")) return;
-       let args = msg.content.split(" ").slice(1);
-      if (!msg.mentions.members.first()) return msg.reply('mention a user/player')
-      if (!args[1]) return msg.reply('Reason for warning ')
-      if (msg.guild.channels.find('name', '⚠-warns')) {
-        msg.guild.channels.find('name', '⚠-warns').send(`
-      ***You have been warned*** : ${msg.mentions.members.first()}
-      ***___Because you did the following___***
-      ${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
-      `)
-      }
-    }
-})
-//report
-client.on('message', msg => { 
-if (msg.content.startsWith(`#report`)) {
-
-   let args = msg.content.split(" ").slice(1);
-
-  if (!msg.mentions.members.first()) return msg.reply(`You must mention person first`)
-
-  if (!args[1]) return msg.reply(`Ummm .. Write your message`)
-
-  if (msg.guild.channels.find('name', '📝-report')) { //channel name
-
-    msg.guild.channels.find('name', '📝-report').send(`
-  Report : ${msg.mentions.members.first()}
-  Reported by:  : ${msg.member}
-  Room : ${msg.channel.name}
-  Reason : **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
-  `)
-  }
-}
-}) 
-
-//Suggestions 
-client.on('message', msg => { 
-if (msg.content.startsWith(`#sug`)) {
-
-   let args = msg.content.split(" ").slice(1);
-
-  if (!msg.mentions.members.first()) return msg.reply(`Mention your name`)
-
-  if (!args[1]) return msg.reply(`Ummm .. Write your message`)
-
-  if (msg.guild.channels.find('name', '📋-suggestions')) { //channel name
-
-    msg.guild.channels.find('name', '📋-suggestions').send(`
-  Report : ${msg.mentions.members.first()}
-  Reported by:  : ${msg.member}
-  Room : ${msg.channel.name}
-  Reason : **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
-  `)
-  }
-}
-}) 
-
-
-
-
-
-
 
 
 
