@@ -186,17 +186,13 @@ client.on('message', msg => {
 }
 });
 
-const figlet = require('figlet');
+//ping
 client.on('message', message => {
+    if (message.author.id === client.user.id) return;
   var prefix = "#"
-if (message.content.startsWith(prefix + 'tag')) {
-    let args = message.content.split(" ").slice(1);
-if(!args[0]) return message.reply('Please write the text you want');  
-
-    figlet(args.join(" "), (err, data) => {
-              message.channel.send("```" + data + "```")
-           })
-}
+            if (message.content.startsWith(prefix + "ping")) {
+        message.channel.sendMessage(':ping_pong: Pong! In `' + `${client.ping}` + ' ms`');
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
