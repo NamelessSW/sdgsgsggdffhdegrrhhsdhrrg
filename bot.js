@@ -186,5 +186,17 @@ client.on('message', msg => {
 }
 });
 
+const figlet = require('figlet');
+client.on('message', message => {
+  var prefix = "#"
+if (message.content.startsWith(prefix + 'tag')) {
+    let args = message.content.split(" ").slice(1);
+if(!args[0]) return message.reply('Please write the text you want');  
+
+    figlet(args.join(" "), (err, data) => {
+              message.channel.send("```" + data + "```")
+           })
+}
+});
 
 client.login(process.env.BOT_TOKEN);
