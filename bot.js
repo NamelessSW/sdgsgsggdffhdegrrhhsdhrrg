@@ -162,13 +162,14 @@ const ra3d = new Discord.RichEmbed()
 
 //clear
 client.on('message', msg => {
+  var prefix ="#"
   if (msg.author.bot) return;
   if (!msg.content.startsWith(prefix)) return;
   let command = msg.content.split(" ")[0];
   command = command.slice(prefix.length);
   let args = msg.content.split(" ").slice(1);
 
-    if(command === "#clear") {
+    if(command === "clear") {
         const emoji = client.emojis.find("name", "wastebasket")
     let textxt = args.slice(0).join("");
     if(msg.member.hasPermission("MANAGE_MESSAGES")) {
