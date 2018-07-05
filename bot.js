@@ -136,7 +136,7 @@ var prefix = "#";
 member.addRole(message.guild.roles.find("name","jail")).catch(console.error);
 const ra3d = new Discord.RichEmbed()
              .setAuthor(message.author.username, message.author.avatarURL)   
-             .setTitle('The person entered the jail ?') 
+             .setTitle('The person entered the jail') 
              .setColor('RANDOM')
               message.channel.sendEmbed(ra3d);    
   }
@@ -156,7 +156,7 @@ var prefix = "#";
 member.removeRole(message.guild.roles.find("name","jail")).catch(console.error);
 const ra3d = new Discord.RichEmbed()
              .setAuthor(message.author.username, message.author.avatarURL)   
-             .setTitle('You were released ??')
+             .setTitle('You were released')
              .setColor('RANDOM')  
               message.channel.sendEmbed(ra3d);    
   }
