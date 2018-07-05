@@ -49,6 +49,23 @@ client.user.setGame(`Playing`,"#help")
     console.log(` Join Bot Of Server ${guild.name} Owner Of Server ${guild.owner.user.username}!`)
   });
 
+//warn 
+client.on('message', msg => { 
+    if (msg.content.startsWith('#warn')) {
+      if(!msg.member.hasPermission("MUTE_MEMBERS")) return;
+       let args = msg.content.split(" ").slice(1);
+      if (!msg.mentions.members.first()) return msg.reply('mention a user/player')
+      if (!args[1]) return msg.reply('Reason for warning ')
+      if (msg.guild.channels.find('name', '⚠-warns')) {
+        msg.guild.channels.find('name', '⚠-warns').send(`
+      ***You have been warned*** : ${msg.mentions.members.first()}
+      ***___Because you did the following___***
+      ${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
+      `)
+      }
+    }
+})
+
 
 
 
