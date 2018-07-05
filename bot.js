@@ -71,11 +71,11 @@ client.on('message', message => {
 if (message.content.startsWith("#ban")) {
   if(!message.member.hasPermission("BAN_MEMBERS")) return;
     var mention = message.mentions.members.first();
-    if(!mention) return message.channel.send("mention a user/player");
+    if(!mention) return message.channel.send("**mention a user/player**");
 
     mention.ban("By: " + message.author.tag);
     
-    message.channel.send("Banned : " + mention.tag);
+    message.channel.send("The user got Banned");
 };
 });
 
