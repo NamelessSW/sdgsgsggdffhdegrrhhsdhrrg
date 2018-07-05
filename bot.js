@@ -119,7 +119,48 @@ client.on('message',function(message) {
        }
 });
 
+//jail
 
+client.on("message", (message) => {
+var prefix = "#";
+      if (message.content.startsWith(prefix+"jail")) {
+        if (!message.member.hasPermission('KICK_MEMBERS')) return message.reply("** You dont have permission 'Manage Roles' **").catch(console.error);
+    if (message.author.bot) return;
+      if (!message.channel.guild) return;
+      var mention = message.mentions.members.first
+      let role = (message.guild.roles.find("name","jail"));      
+      if (!role) message.guild.createRole({ name:'jail', permissions:[1] });
+      if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply("This is for management");
+      if(!message.mentions.members.first()) return message.reply("Mention player ??")
+      let member = message.mentions.members.first()
+member.addRole(message.guild.roles.find("name","jail")).catch(console.error);
+const ra3d = new Discord.RichEmbed()
+             .setAuthor(message.author.username, message.author.avatarURL)   
+             .setTitle('The person entered the jail ?') 
+             .setColor('RANDOM')
+              message.channel.sendEmbed(ra3d);    
+  }
+});
+
+//unjail
+
+client.on("message", (message) => {
+var prefix = "#";
+      if (message.content.startsWith(prefix+"unjail")) {
+        if (!message.member.hasPermission('KICK_MEMBERS')) return message.reply("** You dont have permission 'Manage Roles' **").catch(console.error);
+          if (message.author.bot) return;
+      if (!message.channel.guild) return;
+      if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply("This is for management");
+      if(!message.mentions.members.first()) return message.reply("Mention player ??");
+      let member = message.mentions.members.first()
+member.removeRole(message.guild.roles.find("name","jail")).catch(console.error);
+const ra3d = new Discord.RichEmbed()
+             .setAuthor(message.author.username, message.author.avatarURL)   
+             .setTitle('You were released ??')
+             .setColor('RANDOM')  
+              message.channel.sendEmbed(ra3d);    
+  }
+});
 
 
 client.login(process.env.BOT_TOKEN);
