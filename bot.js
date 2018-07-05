@@ -42,7 +42,7 @@ client.user.setGame(`Playing`,"#help")
         console.log(`ON ${client.guilds.size} Servers '     Script By : _xShaDowZx ' `);
       console.log(`----------------`);
     console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity(` ON ${client.guilds.size} Servers - Server Maker`,"#")
+  client.user.setActivity(` ON ${client.guilds.size} Servers - #help`,"#")
   client.user.setStatus("Online")
   });
   client.on("guildCreate", guild => {
