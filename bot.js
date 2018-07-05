@@ -64,7 +64,42 @@ client.on('message', msg => {
       `)
       }
     }
-})
+});
+
+//mute
+client.on("message", message => {
+  if (message.author.bot) return;
+  
+  let command = message.content.split(" ")[0];
+  
+  if (command === "#mute") {
+        if (!message.member.hasPermission('MUTE_MEMBERS')) return message.reply("** You dont have permission**").catch(console.error);
+  let user = message.mentions.users.first();
+  let modlog = client.channels.find('name', 'mute-log');
+  let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
+  if (!muteRole) return message.reply("** There is no Mute Role 'Muted' **").catch(console.error);
+  if (message.mentions.users.size < 1) return message.reply('** You must mention person first**').catch(console.error);
+  
+  const embed = new Discord.RichEmbed()
+    .setColor(0x00AE86)
+    .setTimestamp()
+    .addField('Use:', 'Shut up / tell')
+    .addField('Muted:', `${user.username}#${user.discriminator} (${user.id})`)
+    .addField('By:', `${message.author.username}#${message.author.discriminator}`)
+   
+   if (!message.guild.member(client.user).hasPermission('MUTE_MEMBERS_OR_PERMISSIONS')) return message.reply('** You dont have permission**').catch(console.error);
+ 
+  if (message.guild.member(user).roles.has(muteRole.id)) {
+return message.reply("**:white_check_mark: .. The member was given Muted**").catch(console.error);
+} else {
+    message.guild.member(user).addRole(muteRole).then(() => {
+return message.reply("**:white_check_mark: .. Done The member got muted**").catch(console.error);
+});
+  }
+
+};
+
+});
 
 
 
