@@ -693,28 +693,33 @@ message.channel.send(
 );
 };
 });
-//embed
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
+//flip
+client.on('message' , async (message) => {
+  var prefix = "#"
+ if (message.content.startsWith(prefix + 'flip')) {
   let args = message.content.split(" ").slice(1);
-  
- 
+if(!args[0]) return message.channel.send('Correct usage: **ks!reverse (text to reverse)**');
 
-if (command == "embed") {
-    let say = new Discord.RichEmbed()
-    .setDescription(args.join("  "))
-    .setColor(0x23b2d6)
-    message.channel.sendEmbed(say);
-    message.delete();
+  function reverseString(str) {
+      return str.split("").reverse().join("");
   }
 
-
-})
+  let sreverse = reverseString(args.join(' '))
+   
+  if(args[0] === sreverse) {
+  
+  sreverse = `${args.join(' ')}..Wait... You broke it!`
+  
+  }
+  const reverseEmbed = new Discord.RichEmbed()
+  .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+  .setColor(0xFFF000)
+  .addField('Input: ', '```' + `${args.join(' ')}` + '```')
+  .addField('Output: ', '```' + `${sreverse}` + '```')
+  message.channel.send({embed: reverseEmbed})
+    
+}
+});
 //help
 client.on('message', message => {
     if (message.content === "#help") {
@@ -743,7 +748,7 @@ let embed = new Discord.RichEmbed()
 .addField("**#st :sparkle: **", "**Shows your Server stats**")
 .addField("**#member :hearts: **", "**Shows who everyone Status**")
 .addField("**#emoji :gem: **", "**Write your word in emoji**")
-.addField("**#embed :star: **", "**Write your word in embed**")
+.addField("**#flip :arrows_clockwise: **","**Flip your word**")
 .addField("**#MCskin :heart_eyes:  **", "**Shows your minecraft skin**")
 .addField("**#sug :notepad_spiral: **", "**Do #sug {Write your suggestion}**")
 .addField("**#report :pencil: **","**Report members**") 
