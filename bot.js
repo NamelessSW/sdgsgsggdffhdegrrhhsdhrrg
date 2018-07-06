@@ -720,6 +720,22 @@ if(!args[0]) return message.channel.send('Correct usage: **ks!reverse (text to r
     
 }
 });
+//rooms
+client.on('message', message => {
+    if (message.content === "#rooms") {
+        if (message.author.bot) return
+                      if (!message.guild) return;
+
+        var channels = message.guild.channels.map(channels => `${channels.name}, `).join(' ')
+        const embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .addField(`${message.guild.name}`,`**Channels (Discord.js) ✅**`)
+        .addField('⬇ Channels. ✔',`** ${message.guild.channels.size}**`)
+        
+.addField('⬇Channel name. ✔:',`**[${channels}]**`)
+        message.channel.sendEmbed(embed);
+    }
+});
 //help
 client.on('message', message => {
     if (message.content === "#help") {
@@ -742,13 +758,14 @@ let embed = new Discord.RichEmbed()
 .addField("**:globe_with_meridians: General commands**","** **")
 .addField("**#ping :stopwatch:**","**Check your connection speed**")
 .addField("**#avatar :camping:**","**Pictures of the chosen person**")
-.addField("**#bot :1234:**","**Info about the bot**")
+.addField("**#bot :floppy_disk:**","**Info about the bot**")
 .addField("**#server :recycle:**","**For server information**")
 .addField("**#id :id: **", "**Shows your ID**")
 .addField("**#st :sparkle: **", "**Shows your Server stats**")
 .addField("**#member :hearts: **", "**Shows who everyone Status**")
 .addField("**#emoji :gem: **", "**Write your word in emoji**")
 .addField("**#flip :arrows_clockwise: **","**Flip your word**")
+.addField("**#rooms :1234: **","**Flip your word**")
 .addField("**#MCskin :heart_eyes:  **", "**Shows your minecraft skin**")
 .addField("**#sug :notepad_spiral: **", "**Do #sug {Write your suggestion}**")
 .addField("**#report :pencil: **","**Report members**") 
