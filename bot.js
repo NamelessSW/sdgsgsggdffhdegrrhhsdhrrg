@@ -671,6 +671,23 @@ let embed = new Discord.RichEmbed()
 message.channel.sendEmbed(embed);
 }
 });
+//help js
+client.on('message', message => {
+if (message.content === "#help-js") { 
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+.addField('     **❧ #help-js-source ➺ ⦁Source Codes** ','**════════════**') //Done
+.addField('     **❧ #help-js-general ➺ ⦁General Codes** ','**════════════**')//Done
+.addField('     **❧ #help-js-welcome ➺ ⦁Welcome Codes** ','**════════════**')//Done
+.addField('     **❧ #help-js-help ➺ ⦁Help Codes** ','**════════════**') //Done
+.addField('     **❧ #help-js-bc ➺ ⦁Broadcast Codes** ','**════════════**')
+.addField('     **❧ #help-js-admin ➺ ⦁Management Codes** ','**════════════**')
+
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
 
 
 client.login(process.env.BOT_TOKEN);
