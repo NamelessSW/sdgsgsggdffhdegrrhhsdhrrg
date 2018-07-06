@@ -606,9 +606,7 @@ let embed = new Discord.RichEmbed()
 message.channel.sendEmbed(embed);
 }
 });
-
 ///Help Codes
-
 client.on('message', message => {
     if (message.content === "#help-2") {
 let embed = new Discord.RichEmbed()
@@ -627,7 +625,6 @@ let embed = new Discord.RichEmbed()
 message.channel.sendEmbed(embed);
 }
 });
-
 //Music commands 
 client.on('message', message => {
 if (message.content === "#help-3") {
@@ -643,7 +640,6 @@ let embed = new Discord.RichEmbed()
 message.channel.sendEmbed(embed);
 }
 });
-
 //Staff commands 
 client.on('message', message => {
 if (message.content === "#help-4") {
@@ -657,6 +653,20 @@ let embed = new Discord.RichEmbed()
 .addField("**#mutechannel and #unmutechannel :mute: **","**Mute and Unmute channels**")
 .addField("**#jail and #unjail :skull_crossbones: **","**Jail and unjail members**")
 .addField("**#warn :warning: **","**Warn members**")
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
+//help-1
+client.on('message', message => {
+if (message.content === "#help-1") { 
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+.addField('     **❧ #help-js ➺ JS codes list** ','**════════════**') //done 
+.addField('     **❧ #help-py ➺ PY codes list (Coming Soon)** ','**════════════**') //Not Ready yet!
+.addField('     **❧ #help-eris  ➺ ERIS  codes list (Coming Soon)** ','**════════════**') //Not Ready yet!
+.addField('     **❧ #help-io ➺ IO codes list (Coming Soon)** ','**════════════**') //Not Ready yet!
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
