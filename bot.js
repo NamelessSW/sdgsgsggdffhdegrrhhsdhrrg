@@ -706,7 +706,7 @@ message.channel.sendEmbed(embed);
 client.on('message', message => {
 if (message.author.bot) return;
 if (message.content === prefix + "help-js-source-1") {
- message.channel.send('**The code has been sent in the private conversation :ok_hand: **'); return message.author.sendMessage('**⦁Main Source** \n\nhttps://hastebin.com/agiduzugav.coffeescript');
+ message.channel.send('**The code has been sent in the private conversation :ok_hand: **'); return message.author.sendMessage('**⦁Main Source** \n\nhttps://pastebin.com/RzUwjMgy');
 
 }
 });
@@ -714,7 +714,7 @@ if (message.content === prefix + "help-js-source-1") {
 client.on('message', message => {
 if (message.author.bot) return;
 if (message.content === prefix + "help-js-source-2") {
- message.channel.send('**The code has been sent in the private conversation :ok_hand: **'); return message.author.sendMessage('**⦁Main Source with live streaming ,Also with prefix and bot information** \n\nhttps://hastebin.com/judegepebi.coffeescript');
+ message.channel.send('**The code has been sent in the private conversation :ok_hand: **'); return message.author.sendMessage('**⦁Main Source with live streaming ,Also with prefix and bot information** \n\nhttps://pastebin.com/vk66BCzW');
 
 }
 });
@@ -722,7 +722,7 @@ if (message.content === prefix + "help-js-source-2") {
 client.on('message', message => {
 if (message.author.bot) return;
 if (message.content === prefix + "help-js-source-3") {
- message.channel.send('**The code has been sent in the private conversation :ok_hand: **'); return message.author.sendMessage('**Main Source with streaming only** \n\nhttps://hastebin.com/aguxifumof.coffeescript');
+ message.channel.send('**The code has been sent in the private conversation :ok_hand: **'); return message.author.sendMessage('**Main Source with streaming only** \n\nhttps://pastebin.com/V75aEVF1');
 
 }
 });
@@ -730,7 +730,7 @@ if (message.content === prefix + "help-js-source-3") {
 client.on('message', message => {
 if (message.author.bot) return;
 if (message.content === prefix + "help-js-source-4") {
- message.channel.send('**The code has been sent in the private conversation :ok_hand: **'); return message.author.sendMessage('**Main Source with Ping Pong!** \n\nhttps://hastebin.com/ikoreguqaz.coffeescript');
+ message.channel.send('**The code has been sent in the private conversation :ok_hand: **'); return message.author.sendMessage('**Main Source with Ping Pong!** \n\nhttps://pastebin.com/kzrtjeKZ');
 
 }
 });
