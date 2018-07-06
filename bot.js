@@ -679,7 +679,7 @@ const mapping = {
 
 client.on('message' , async (message) => {
   var prefix = "#"
-       if(message.content.startsWith(prefix + "e")) {
+       if(message.content.startsWith(prefix + "emoji")) {
           let args = message.content.split(" ").slice(1);
   if (args.length < 1) {
     message.channel.send('You must provide some text to emojify!');
@@ -744,7 +744,7 @@ let embed = new Discord.RichEmbed()
 .addField("**#id :id: **", "**Shows your ID**")
 .addField("**#st :sparkle: **", "**Shows your Server stats**")
 .addField("**#member :hearts: **", "**Shows who everyone Status**")
-.addField("**#e :gem: **", "**Write your word in emoji**")
+.addField("**#emoji :gem: **", "**Write your word in emoji**")
 .addField("**#embed :star: **", "**Write your word in embed**")
 .addField("**#MCskin :heart_eyes:  **", "**Shows your minecraft skin**")
 .addField("**#sug :notepad_spiral: **", "**Do #sug {Write your suggestion}**")
