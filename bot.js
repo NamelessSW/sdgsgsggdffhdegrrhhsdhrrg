@@ -54,8 +54,8 @@ client.on('message', msg => {
     if (msg.content.startsWith('#warn')) {
       if(!msg.member.hasPermission("MUTE_MEMBERS")) return;
        let args = msg.content.split(" ").slice(1);
-      if (!msg.mentions.members.first()) return msg.reply('mention a user/player')
-      if (!args[1]) return msg.reply('Reason for warning ')
+      if (!msg.mentions.members.first()) return msg.reply('**mention a user/player**')
+      if (!args[1]) return msg.reply('**Reason for warning**')
       if (msg.guild.channels.find('name', '⚠-warns')) {
         msg.guild.channels.find('name', '⚠-warns').send(`
       ***You have been warned*** : ${msg.mentions.members.first()}
@@ -446,6 +446,48 @@ client.on('guildMemberAdd', member => {
     channel.send({embed : embed});
     });
 
+//Suggest
+client.on('message', message => {
+var prefix = "#"
+  if (message.content.startsWith( prefix + "sug")) {
+  if (!message.channel.guild) return;
+  let args = message.content.split(" ").slice(1).join(' ');
+  client.channels.get("449243876817895434").send( //Room ID
+      "\n" + "**" + "Server :" + "**" +
+      "\n" + "**" + "» " + message.guild.name + "**" +
+      "\n" + "**" + "  Proposal : " + "**" +
+      "\n" + "**" + "» " + message.author.tag + "**" +
+      "\n" + "**" + " Suggestion : " + "**" +
+      "\n" + "**" + args + "**")
+  }
+  }); 
+//Report
+client.on('message', msg => { 
+if (msg.content.startsWith(`#report`)) {
+
+   let args = msg.content.split(" ").slice(1);
+
+  if (!msg.mentions.members.first()) return msg.reply(`You must mention person first`)
+
+  if (!args[1]) return msg.reply(`Ummm .. Write your message`)
+
+  if (msg.guild.channels.find('name', '📝-report')) { //channel name
+
+    msg.guild.channels.find('name', '📝-report').send(`
+  **Report** : ${msg.mentions.members.first()}
+  ***Reported by***:  : ${msg.member}
+  **Room** : ${msg.channel.name}
+  ***Reason*** : **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
+  `)
+  }
+}
+});
+//your bot has been added to new server
+client.on('guildCreate', guild => {
+    client.channels.get("449245081011224577").send(`**Woops new server ✅
+  Server name: __${guild.name}__
+  Server owner: __${guild.owner}__**`)
+  });
 
 
 client.login(process.env.BOT_TOKEN);
