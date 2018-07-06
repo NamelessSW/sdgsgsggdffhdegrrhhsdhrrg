@@ -365,5 +365,50 @@ if (message.content.startsWith(prefix + "uptime")) {
 }
 });
 
+//say
+client.on('message', message => {
+  var prefix = "#"
+    if (message.author.bot) return;
+    if (!message.content.startsWith(prefix)) return;
+  
+    let command = message.content.split(" ")[0];
+    command = command.slice(prefix.length);
+  
+    let args = message.content.split(" ").slice(1);
+  
+    if (command == "say") {
+     message.channel.sendMessage(args.join("  "))
+     message.delete()
+    }
+});
+
+//bot owner 
+var prefix = "#";
+client.on('message', message => {
+  if (!message.content.startsWith(prefix)) return;
+  const verifed = ["236192758765715456"]; 
+if (message.content.startsWith(prefix + 'owner')) {
+if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`**   The owner of the bot is here**` + `✅`)
+} else {
+   message.reply('**You are not the owner of the bot**' + '❌');   
+}
+}
+});
+
+//bot type
+client.on('message', message =>{
+    if (message.author.bot) return;
+    if(message.content == "#type"){
+message.channel.startTyping();
+}
+});
+client.on('message', message =>{
+    if (message.author.bot) return;
+    if(message.content == "#stype"){
+message.channel.stopTyping();
+}
+});
+
+
 
 client.login(process.env.BOT_TOKEN);
