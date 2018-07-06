@@ -383,7 +383,6 @@ client.on('message', message => {
 });
 
 //bot owner 
-var prefix = "#"
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   const verifed = ["236192758765715456"]; 
