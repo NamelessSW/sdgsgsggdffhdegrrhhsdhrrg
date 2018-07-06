@@ -592,6 +592,20 @@ client.on('guildMemberAdd', member => {
     let bots = member.guild.members.filter(m => m.user.bot).size
     member.guild.channels.get('453645288737996811').setName(`Total Bots: ${bots}`);
 });
+//help
+client.on('message', message => {
+    if (message.content === "#help") {
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.setTitle('**─══════ {✯Choose✯} ══════─**')
+.addField('     **❧ #help-1 ➺ Codes list** ','**════════════**') //done
+.addField('     **❧ #help-2 ➺ General commands**','**════════════**') //done
+.addField('     **❧ #help-3 ➺ Music Commands**' ,'**════════════**') //done
+.addField('     **❧ #help-4 ➺ Management orders**' ,'**════════════**') //done
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
 
 
 client.login(process.env.BOT_TOKEN);
