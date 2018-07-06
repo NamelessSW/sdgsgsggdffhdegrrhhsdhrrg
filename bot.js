@@ -694,10 +694,9 @@ message.channel.send(
 };
 });
 //embed
-var prefix = "#"
-
 client.on('message', message => {
   if (message.author.bot) return;
+	var prefix = "#"
   if (!message.content.startsWith(prefix)) return;
 
   let command = message.content.split(" ")[0];
