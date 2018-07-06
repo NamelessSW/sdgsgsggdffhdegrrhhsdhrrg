@@ -408,6 +408,44 @@ message.channel.stopTyping();
 }
 });
 
+//Welcome
+client.on('guildMemberAdd', member => {
+    let channel = member.guild.channels.find('name', '👋-welcome');
+    let memberavatar = member.user.avatarURL
+      if (!channel) return;
+    let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(memberavatar)
+        .addField(':running_shirt_with_sash: | name :  ',`${member}`)
+        .addField(':loudspeaker: | Welcome to Codes' , `Welcome to the server, ${member}`)
+        .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
+                .addField('➡| You are the member number',`${member.guild.memberCount}`)
+               
+                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
+                     
+                                     .addField(' Server', `${member.guild.name}`,true)
+                                       
+     .setFooter(`${member.guild.name}`)
+        .setTimestamp()
+   
+      channel.sendEmbed(embed);
+    });
+//GoodBye
+    client.on('guildMemberRemove', member => {
+        var embed = new Discord.RichEmbed()
+        .setAuthor(member.user.username, member.user.avatarURL)
+        .setThumbnail(member.user.avatarURL)
+        .setTitle(`Good Bye! :raised_hand::skin-tone-1: :pensive:`)
+        .setDescription(`Good bye Nice to meet you :raised_hand::skin-tone-1: :pensive: `)
+        .addField(':bust_in_silhouette:   remain',`**[ ${member.guild.memberCount} ]**`,true)
+        .setColor('RED')
+        .setFooter(`==== We wish you the best ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+    
+    var channel =member.guild.channels.find('name', '😢-good-bye')
+    if (!channel) return;
+    channel.send({embed : embed});
+    });
+
 
 
 client.login(process.env.BOT_TOKEN);
