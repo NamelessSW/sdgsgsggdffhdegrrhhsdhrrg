@@ -628,5 +628,39 @@ message.channel.sendEmbed(embed);
 }
 });
 
+//Music commands 
+client.on('message', message => {
+if (message.content === "#help-3") {
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField("** :musical_note: Music Commands (Coming Soon) **","** **")
+.addField("**#play :musical_note:**","**Turn on the desired**")
+.addField("**#stop  :musical_keyboard:**","**Stop required**")
+.addField("**#pause :musical_score:**","**Turn off the temp timer**")
+.addField("**#resume :mute: **","**Turn on the desired after the stop**")
+.addField("**#skip :left_right_arrow:**","**Skip the song**")
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
+
+//Staff commands 
+client.on('message', message => {
+if (message.content === "#help-4") {
+if(!message.member.hasPermission('MUTE_MEMBERS')) return message.reply('This property is for management only');
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField("**:radioactive: Management orders**","** **")
+.addField("**#clear :octagonal_sign:**","**Clear Chat**")
+.addField("**#kick  :outbox_tray:**","**Kick memebers**")
+.addField("**#ban  :no_entry:**","**Ban members**")
+.addField("**#mutechannel and #unmutechannel :mute: **","**Mute and Unmute channels**")
+.addField("**#jail and #unjail :skull_crossbones: **","**Jail and unjail members**")
+.addField("**#warn :warning: **","**Warn members**")
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
+
 
 client.login(process.env.BOT_TOKEN);
