@@ -607,5 +607,26 @@ message.channel.sendEmbed(embed);
 }
 });
 
+///Help Codes
+
+client.on('message', message => {
+    if (message.content === "#help-2") {
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField("**:globe_with_meridians: General commands**","** **")
+.addField("**#ping :stopwatch:**","**Check your connection speed**")
+.addField("**#avatar :camping:**","**Pictures of the chosen person**")
+.addField("**#bot :1234:**","**Info about the bot**")
+.addField("**#server :recycle:**","**For server information**")
+.addField("**#id :id: **", "**Shows your ID**")
+.addField("**#member :hearts: **", "**Shows who everyone Status**")
+.addField("**#MCskin :heart_eyes:  **", "**Shows your minecraft skin**")
+.addField("**#sug :notepad_spiral: **", "**Do #sug {Write your suggestion}**")
+.addField("**#report :pencil: **","**Report members**") 
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
+
 
 client.login(process.env.BOT_TOKEN);
