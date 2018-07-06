@@ -676,7 +676,7 @@ client.on('message', message => {
 if (message.content === "#help-js") { 
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+.setTitle('**⦁All types of codes in __Codes__ Server 💬⦁**')
 .addField('     **❧ #help-js-source ➺ ⦁Source Codes** ','**════════════**') //Done
 .addField('     **❧ #help-js-general ➺ ⦁General Codes** ','**════════════**')//Done
 .addField('     **❧ #help-js-welcome ➺ ⦁Welcome Codes** ','**════════════**')//Done
@@ -688,6 +688,53 @@ let embed = new Discord.RichEmbed()
 message.channel.sendEmbed(embed);
 }
 });
+//help js source
+client.on('message', message => {
+if (message.content === "#help-js-source") { 
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+.addField('     **❧ #help-js-source-1  ➺ ⦁Main Source** ','**════════════**')
+.addField('     **❧ #help-js-source-2 ➺ ⦁Main Source with live streaming ,Also with prefix and bot information** ','**════════════**')
+.addField('     **❧ #help-js-source-3 ➺ ⦁Main Source with streaming only** ','**════════════**')
+.addField('     **❧ #help-js-source-4 ➺ ⦁Main Source with Ping Pong!** ','**════════════**')
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
+//js soruce send dm (1)
+client.on('message', message => {
+if (message.author.bot) return;
+if (message.content === prefix + "help-js-source-1") {
+ message.channel.send('**The code has been sent in the private conversation :ok_hand: **'); return message.author.sendMessage('**⦁Main Source** \n\nhttps://hastebin.com/agiduzugav.coffeescript');
+
+}
+});
+//js source send dm (2)
+client.on('message', message => {
+if (message.author.bot) return;
+if (message.content === prefix + "help-js-source-2") {
+ message.channel.send('**The code has been sent in the private conversation :ok_hand: **'); return message.author.sendMessage('**⦁Main Source with live streaming ,Also with prefix and bot information** \n\nhttps://hastebin.com/judegepebi.coffeescript');
+
+}
+});
+//js source send dm (3)
+client.on('message', message => {
+if (message.author.bot) return;
+if (message.content === prefix + "help-js-source-3") {
+ message.channel.send('**The code has been sent in the private conversation :ok_hand: **'); return message.author.sendMessage('**Main Source with streaming only** \n\nhttps://hastebin.com/aguxifumof.coffeescript');
+
+}
+});
+//js source send dm (4)
+client.on('message', message => {
+if (message.author.bot) return;
+if (message.content === prefix + "help-js-source-4") {
+ message.channel.send('**The code has been sent in the private conversation :ok_hand: **'); return message.author.sendMessage('**Main Source with Ping Pong!** \n\nhttps://hastebin.com/ikoreguqaz.coffeescript');
+
+}
+});
+/////////////
 
 
 client.login(process.env.BOT_TOKEN);
