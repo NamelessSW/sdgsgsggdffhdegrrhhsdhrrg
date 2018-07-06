@@ -488,6 +488,53 @@ client.on('guildCreate', guild => {
   Server name: __${guild.name}__
   Server owner: __${guild.owner}__**`)
   });
+//All bots cmd
+client.on('message', message => {
+	if(!message.channel.guild) return;
+var prefix = "#"
+			   if(message.content.startsWith(prefix + 'bots')) {
+
+   
+   if (message.author.bot) return;
+   let i = 1;
+	   const botssize = message.guild.members.filter(m=>m.user.bot).map(m=>`${i++} - <@${m.id}>`);
+		 const embed = new Discord.RichEmbed()
+		 .setAuthor(message.author.tag, message.author.avatarURL)
+		 .setDescription(`**Found ${message.guild.members.filter(m=>m.user.bot).size} bots in this Server**
+${botssize.join('\n')}`)
+.setFooter(client.user.username, client.user.avatarURL)
+.setTimestamp();
+message.channel.send(embed)
+
+}
+
+});
+//bot
+client.on('message', message => {
+    if(message.content === "#bot") {
+        const embed = new Discord.RichEmbed()
+        .setColor("#00FFFF")
+  .addField('**Memory used 💾**', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
+         .addField('**Connection Speed  📡**' , `${Date.now() - message.createdTimestamp}` + ' ms')
+        .addField('**using the processor 💿**', `${(process.cpuUsage().rss / 10000).toFixed()}%`, true)
+        .addField('**🌐 Number of servers**' , `${client.guilds.size}`, true)
+        .addField('**users number 👥 **' , `${client.users.size}`, true)
+               message.channel.sendEmbed(embed);
+           }
+});
+//MC skins
+client.on("message", message => {
+    var prefix = "#"
+    if (!message.content.startsWith(prefix)) return;
+      let command = message.content.split(" ")[0];
+      command = command.slice(prefix.length);
+        if(command === "MCskin") {
+                const args = message.content.split(" ").slice(1).join(" ")
+        if (!args) return message.channel.send("** Type your skin name **");
+        const image = new Discord.Attachment(`https://minotar.net/armor/body/${args}`, "skin.png");
+    message.channel.send(image)
+        }
+    });
 
 
 client.login(process.env.BOT_TOKEN);
