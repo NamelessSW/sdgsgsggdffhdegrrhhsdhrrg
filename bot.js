@@ -693,6 +693,30 @@ message.channel.send(
 );
 };
 });
+//embed
+var prefix = "#";
+
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+  
+ 
+
+if (command == "embed") {
+    let say = new Discord.RichEmbed()
+    .setDescription(args.join("  "))
+    .setColor(0x23b2d6)
+    message.channel.sendEmbed(say);
+    message.delete();
+  }
+
+
+})
 //help
 client.on('message', message => {
     if (message.content === "#help") {
@@ -720,6 +744,8 @@ let embed = new Discord.RichEmbed()
 .addField("**#id :id: **", "**Shows your ID**")
 .addField("**#st :sparkle: **", "**Shows your Server stats**")
 .addField("**#member :hearts: **", "**Shows who everyone Status**")
+.addField("**#e :gem: **", "**Write your word in emoji**")
+.addField("**#embed :star: **", "**Write your word in embed**")
 .addField("**#MCskin :heart_eyes:  **", "**Shows your minecraft skin**")
 .addField("**#sug :notepad_spiral: **", "**Do #sug {Write your suggestion}**")
 .addField("**#report :pencil: **","**Report members**") 
