@@ -729,7 +729,7 @@ client.on('message', message => {
         var channels = message.guild.channels.map(channels => `${channels.name}, `).join(' ')
         const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
-        .addField(`${message.guild.name}`,`**Channels (Discord.js) ✅**`)
+        .addField(`${message.guild.name}`,`**Codes Channels ✅**`)
         .addField('⬇ Channels. ✔',`** ${message.guild.channels.size}**`)
         
 .addField('⬇Channel name. ✔:',`**[${channels}]**`)
