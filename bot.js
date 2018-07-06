@@ -130,7 +130,7 @@ var prefix = "#";
       let role = (message.guild.roles.find("name","jail"));      
       if (!role) message.guild.createRole({ name:'jail', permissions:[1] });
       if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply("This is for management");
-      if(!message.mentions.members.first()) return message.reply("Mention player ??")
+      if(!message.mentions.members.first()) return message.reply("**Mention player**")
       let member = message.mentions.members.first()
 member.addRole(message.guild.roles.find("name","jail")).catch(console.error);
 const ra3d = new Discord.RichEmbed()
@@ -149,7 +149,7 @@ var prefix = "#";
           if (message.author.bot) return;
       if (!message.channel.guild) return;
       if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply("This is for management");
-      if(!message.mentions.members.first()) return message.reply("Mention player ??");
+      if(!message.mentions.members.first()) return message.reply("**Mention player**");
       let member = message.mentions.members.first()
 member.removeRole(message.guild.roles.find("name","jail")).catch(console.error);
 const ra3d = new Discord.RichEmbed()
@@ -319,6 +319,51 @@ client.on('message', message => {
 
     }
   });
+
+//uptime
+client.on('message', message => {
+    var prefix = "#"
+if (message.content.startsWith(prefix + "uptime")) {
+   let uptime = client.uptime;
+
+   let days = 0;
+   let hours = 0;
+   let minutes = 0;
+   let seconds = 0;
+   let notCompleted = true;
+
+   while (notCompleted) {
+
+       if (uptime >= 8.64e+7) {
+
+           days++;
+           uptime -= 8.64e+7;
+
+       } else if (uptime >= 3.6e+6) {
+
+           hours++;
+           uptime -= 3.6e+6;
+
+       } else if (uptime >= 60000) {
+
+           minutes++;
+           uptime -= 60000;
+
+       } else if (uptime >= 1000) {
+           seconds++;
+           uptime -= 1000;
+
+       }
+
+       if (uptime < 1000)  notCompleted = false;
+
+   }
+
+   message.channel.send("`" + `${days} days, ${hours} hrs, ${minutes} min , ${seconds} sec` + "`");
+
+
+}
+});
 
 
 client.login(process.env.BOT_TOKEN);
