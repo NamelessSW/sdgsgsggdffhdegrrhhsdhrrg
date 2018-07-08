@@ -728,6 +728,552 @@ let embed = new Discord.RichEmbed()
 message.channel.sendEmbed(embed);
 }
 });
+//help js source
+client.on('message', message => {
+    if (message.content === "#help-js-source") { 
+    let embed = new Discord.RichEmbed()
+    .setThumbnail(message.author.avatarURL)
+    .setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+    .addField('     **❧ #help-js-source-1  ➺ ⦁Main Source** ','**════════════**')
+    .addField('     **❧ #help-js-source-2 ➺ ⦁Main Source with live streaming ,Also with prefix and bot information** ','**════════════**')
+    .addField('     **❧ #help-js-source-3 ➺ ⦁Main Source with streaming only** ','**════════════**')
+    .addField('     **❧ #help-js-source-4 ➺ ⦁Main Source with Ping Pong!** ','**════════════**')
+    .setColor('#7d2dbe')
+    message.channel.sendEmbed(embed);
+    }
+    });
+//help js source 1
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-source-1') {
+        message.author.send('  **⦁Main Source  | ** https://pastebin.com/RzUwjMgy    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-source-1") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help js source 2
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-source-2') {
+        message.author.send('  **⦁Main Source with live streaming ,Also with prefix and bot information  | ** https://pastebin.com/vk66BCzW    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-source-2") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+
+  //help js source 3
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-source-3') {
+        message.author.send('  **⦁Main Source with streaming only  | ** https://pastebin.com/V75aEVF1    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-source-3") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+  //help js source 4
+  client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-source-4') {
+        message.author.send('  **⦁Main Source with Ping Pong!  | ** https://pastebin.com/kzrtjeKZ    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-source-4") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+
+
+//help general
+client.on('message', message => {
+    if (message.content === "#help-js-general") { 
+    let embed = new Discord.RichEmbed()
+    .setThumbnail(message.author.avatarURL)
+    .setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+    .addField('     **❧ #help-js-general-1  ➺ ⦁Ping Code** ','**════════════**')
+    .addField('     **❧ #help-js-general-2 ➺ ⦁Roll Code** ','**════════════**')
+    .addField('     **❧ #help-js-general-3 ➺ ⦁Avatar Code** ','**════════════**')
+    .addField('     **❧ #help-js-general-4 ➺ ⦁Server info Code** ','**════════════**')
+    .addField('     **❧ #help-js-general-5 ➺ ⦁ID Code** ','**════════════**')
+    .setColor('#7d2dbe')
+    message.channel.sendEmbed(embed);
+    }
+    });
+
+//help js general 1
+  client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-general-1') {
+        message.author.send('  **⦁Ping Code  | ** https://pastebin.com/z127GTfi    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-general-1") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help js general 2
+  client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-general-2') {
+        message.author.send('  **⦁Roll Code  | ** https://pastebin.com/t6wStpwP    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-general-2") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help js general 3
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-general-3') {
+        message.author.send('  **⦁Avatar Code  | ** https://pastebin.com/C9B1A2Z4    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-general-3") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help js general 4
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-general-4') {
+        message.author.send('  **⦁Server info Code  | ** https://pastebin.com/Cv8tehRe    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-general-4") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help js general 5
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-general-5') {
+        message.author.send('  **⦁ID Code  | ** https://pastebin.com/9p5hjKHr    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-general-5") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help welcome
+client.on('message', message => {
+    if (message.content === "#help-js-welcome") { 
+    let embed = new Discord.RichEmbed()
+    .setThumbnail(message.author.avatarURL)
+    .setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+    .addField('     **❧ #help-js-welcome-1  ➺ ⦁Welcome with a member number Code** ','**════════════**')
+    .addField('     **❧ #help-js-welcome-2 ➺ ⦁Leave member with picture Code** ','**════════════**')
+    .setColor('#7d2dbe')
+    message.channel.sendEmbed(embed);
+    }
+    });
+//help js welcome 1
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-welcome-1') {
+        message.author.send('  **⦁Welcome with a member number Code  | ** https://pastebin.com/mm5MrNmP    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-welcome-1") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help js welcome 2
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-welcome-2') {
+        message.author.send('  **⦁Leave member with picture Code  | ** https://pastebin.com/A7peGwJd    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-welcome-2") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help help
+client.on('message', message => {
+    if (message.content === "#help-js-help") { 
+    let embed = new Discord.RichEmbed()
+    .setThumbnail(message.author.avatarURL)
+    .setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+    .addField('     **❧ #help-js-help-1   ➺ ⦁Help with the image in the same chat Code** ','**════════════**')
+    .addField('     **❧ #help-js-help-2  ➺ ⦁Help send in private chat Code** ','**════════════**')
+    .setColor('#7d2dbe')
+    message.channel.sendEmbed(embed);
+    }
+    });
+//help js help 1
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-help-1') {
+        message.author.send('  **⦁Help with the image in the same chat Code  | ** https://pastebin.com/iXsw6mMM    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-help-1") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help js help 2
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-help-2') {
+        message.author.send('  **⦁Help send in private chat Code  | ** https://pastebin.com/9ZmwuSQM    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-help-2") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help bc
+client.on('message', message => {
+    if (message.content === "#help-js-bc") { 
+    let embed = new Discord.RichEmbed()
+    .setThumbnail(message.author.avatarURL)
+    .setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+    .addField('     **❧ #help-js-bc-1   ➺ ⦁Broadcast + All + Developed Code** ','**════════════**')
+    .addField('     **❧ #help-js-bc-2  ➺ ⦁Broadcast + All + Not Developed Code** ','**════════════**')
+    .addField('     **❧ #help-js-bc-3   ➺ ⦁Broadcast + for online only + With mention + Not Developed Code** ','**════════════**')
+    .addField('     **❧ #help-js-bc-4  ➺ ⦁Brodcast + All + With Mention + Not Developed Code** ','**════════════**')
+    .addField('     **❧ #help-js-bc-5  ➺ ⦁Brodcast + Role Code** ','**════════════**')
+    
+    .setColor('#7d2dbe')
+    message.channel.sendEmbed(embed);
+    }
+    });
+//help js bc 1
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-bc-1') {
+        message.author.send('  **⦁Broadcast + All + Developed Code  | ** https://pastebin.com/SLQYFN0g    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-bc-1") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help js bc 2
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-bc-2') {
+        message.author.send('  **⦁Broadcast + All + Not Developed Code  | ** https://pastebin.com/uJg5BzT1    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-bc-2") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help js bc 3
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-bc-3') {
+        message.author.send('  **⦁Broadcast + for online only + With mention + Not Developed Code  | ** https://pastebin.com/jEmkjJrd    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-bc-3") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help js bc 4
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-bc-4') {
+        message.author.send('  **⦁Brodcast + Role Code  | ** https://pastebin.com/3K0nZV8N    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-bc-4") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help admin
+client.on('message', message => {
+    if (message.content === "#help-js-admin") { 
+    let embed = new Discord.RichEmbed()
+    .setThumbnail(message.author.avatarURL)
+    .setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+    .addField('     **❧ #help-js-admin-1   ➺ ⦁Ban Code** ','**════════════**')
+    .addField('     **❧ #help-js-admin-2  ➺ ⦁Kick Code** ','**════════════**')
+    .addField('     **❧ #help-js-admin-3   ➺ ⦁Clear chat Code** ','**════════════**')
+    .setColor('#7d2dbe')
+    message.channel.sendEmbed(embed);
+    }
+    });
+//help js admin 1
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-admin-1') {
+        message.author.send('  **⦁Ban Code  | ** https://pastebin.com/tSDNVN97    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-admin-1") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help js admin 2
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-admin-2') {
+        message.author.send('  **⦁Kick Code  | ** https://pastebin.com/Y4Ad0yA2    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-admin-2") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
+//help js admin 3
+client.on('message', message => {
+    if (true) {
+  if (message.content === '#help-js-admin-3') {
+        message.author.send('  **⦁Clear chat Code  | ** https://pastebin.com/HWbJiEr7    ').catch(e => console.log(e.stack));
+   
+      }
+     }
+    });
+   
+   
+  client.on('message', message => {
+       if (message.content === "#help-js-admin-3") {
+       let embed = new Discord.RichEmbed()
+    .setAuthor(message.author.username)
+    .setColor("#9B59B6")
+    .addField(" **Done :wink: ** " , "** The code has been sent in the private conversation :ok_hand:**")
+       
+       
+       
+    message.channel.sendEmbed(embed);
+      }
+  });
 
 
 client.login(process.env.BOT_TOKEN);
