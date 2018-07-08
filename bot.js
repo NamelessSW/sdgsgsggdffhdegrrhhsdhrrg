@@ -716,7 +716,7 @@ client.on('message', message => {
 if (message.content === "#help-js") { 
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.setTitle('**⦁All types of codes in __Codes__ Server (Coming Soon) 💬⦁**')
+.setTitle('**⦁All types of codes in __Codes__ Server 💬⦁**')
 .addField('     **❧ #help-js-source ➺ ⦁Source Codes** ','**════════════**') //Done
 .addField('     **❧ #help-js-general ➺ ⦁General Codes** ','**════════════**')//Done
 .addField('     **❧ #help-js-welcome ➺ ⦁Welcome Codes** ','**════════════**')//Done
