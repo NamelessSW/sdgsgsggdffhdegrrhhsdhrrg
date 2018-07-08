@@ -613,6 +613,48 @@ if(!args[0]) return message.channel.send('Correct usage: **ks!reverse (text to r
     
 }
 });
+//Link
+client.on('message', message => {
+    if (message.content.startsWith("#Link")) {
+
+  message.channel.createInvite({
+        thing: true,
+        maxUses: 100,
+        maxAge: 86400
+    }).then(invite =>
+      message.author.sendMessage(invite.url)
+    )
+  message.channel.send("**The link was sent with a private message**")
+
+message.author.send(`**Link duration: day
+Number of uses of the link : 100**`)
+
+
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //help
 client.on('message', message => {
     if (message.content === "#help") {
@@ -642,6 +684,7 @@ let embed = new Discord.RichEmbed()
 .addField("**#emoji :gem: **", "**Write your word in emoji**")
 .addField("**#flip :arrows_clockwise: **","**Flip your word**")
 .addField("**#day :cloud: **","**Shows the date and the time**")
+.addField("**#Link :link: **","**Give you our Discord invite link**")
 .addField("**#MCskin :heart_eyes:  **", "**Shows your minecraft skin**")
 .addField("**#sug :notepad_spiral: **", "**Do #sug {Write your suggestion}**")
 .addField("**#report :pencil: **","**Report members**") 
