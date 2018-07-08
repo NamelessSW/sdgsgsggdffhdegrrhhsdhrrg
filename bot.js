@@ -1258,6 +1258,14 @@ client.on('message', message => {
     message.channel.sendEmbed(embed);
       }
   });
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('discord.gg')){
+      if(!message.member.hasPermission('ADMINISTRATOR'))
+        message.delete()
+    return message.reply(`** No Invite Links :angry: ! **`)
+    }
+});
 
 
 client.login(process.env.BOT_TOKEN);
