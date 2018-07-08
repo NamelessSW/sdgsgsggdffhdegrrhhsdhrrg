@@ -648,7 +648,7 @@ client.on('message', message => {
     if (message.content === "#help-2") {
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.addField("**:globe_with_meridians: General commands**","** **")
+.addField("**:globe_with_meridians: __General commands__**","** **")
 .addField("**#ping :stopwatch:**","**Check your connection speed**")
 .addField("**#avatar :camping:**","**Pictures of the chosen person**")
 .addField("**#bot :floppy_disk:**","**Info about the bot**")
@@ -670,7 +670,7 @@ client.on('message', message => {
 if (message.content === "#help-3") {
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.addField("** :musical_note: Music Commands (Coming Soon) **","** **")
+.addField("** :musical_note: Music Commands __(Coming Soon)__ **","** **")
 .addField("**#play :musical_note:**","**Turn on the desired**")
 .addField("**#stop  :musical_keyboard:**","**Stop required**")
 .addField("**#pause :musical_score:**","**Turn off the temp timer**")
@@ -686,7 +686,7 @@ if (message.content === "#help-4") {
 if(!message.member.hasPermission('MUTE_MEMBERS')) return message.reply('This property is for management only');
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.addField("**:radioactive: Management orders**","** **")
+.addField("**:radioactive: __Management orders__**","** **")
 .addField("**#clear :octagonal_sign:**","**Clear Chat**")
 .addField("**#kick  :outbox_tray:**","**Kick memebers**")
 .addField("**#ban  :no_entry:**","**Ban members**")
@@ -702,7 +702,7 @@ client.on('message', message => {
 if (message.content === "#help-1") { 
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+.setTitle('**⦁All types of codes in __Codes__ Server 💬⦁**')
 .addField('     **❧ #help-js ➺ JS codes list** ','**════════════**') //done 
 .addField('     **❧ #help-py ➺ PY codes list (Coming Soon)** ','**════════════**') //Not Ready yet!
 .addField('     **❧ #help-eris  ➺ ERIS  codes list (Coming Soon)** ','**════════════**') //Not Ready yet!
@@ -733,7 +733,7 @@ client.on('message', message => {
     if (message.content === "#help-js-source") { 
     let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
-    .setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+    .setTitle('**⦁All types of codes in __Codes__ Server 💬⦁**')
     .addField('     **❧ #help-js-source-1  ➺ ⦁Main Source** ','**════════════**')
     .addField('     **❧ #help-js-source-2 ➺ ⦁Main Source with live streaming ,Also with prefix and bot information** ','**════════════**')
     .addField('     **❧ #help-js-source-3 ➺ ⦁Main Source with streaming only** ','**════════════**')
@@ -842,7 +842,7 @@ client.on('message', message => {
     if (message.content === "#help-js-general") { 
     let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
-    .setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+    .setTitle('**⦁All types of codes in __Codes__ Server 💬⦁**')
     .addField('     **❧ #help-js-general-1  ➺ ⦁Ping Code** ','**════════════**')
     .addField('     **❧ #help-js-general-2 ➺ ⦁Roll Code** ','**════════════**')
     .addField('     **❧ #help-js-general-3 ➺ ⦁Avatar Code** ','**════════════**')
@@ -973,7 +973,7 @@ client.on('message', message => {
     if (message.content === "#help-js-welcome") { 
     let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
-    .setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+    .setTitle('**⦁All types of codes in __Codes__ Server 💬⦁**')
     .addField('     **❧ #help-js-welcome-1  ➺ ⦁Welcome with a member number Code** ','**════════════**')
     .addField('     **❧ #help-js-welcome-2 ➺ ⦁Leave member with picture Code** ','**════════════**')
     .setColor('#7d2dbe')
@@ -1031,7 +1031,7 @@ client.on('message', message => {
     if (message.content === "#help-js-help") { 
     let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
-    .setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+    .setTitle('**⦁All types of codes in __Codes__ Server 💬⦁**')
     .addField('     **❧ #help-js-help-1   ➺ ⦁Help with the image in the same chat Code** ','**════════════**')
     .addField('     **❧ #help-js-help-2  ➺ ⦁Help send in private chat Code** ','**════════════**')
     .setColor('#7d2dbe')
@@ -1089,7 +1089,7 @@ client.on('message', message => {
     if (message.content === "#help-js-bc") { 
     let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
-    .setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+    .setTitle('**⦁All types of codes in __Codes__ Server 💬⦁**')
     .addField('     **❧ #help-js-bc-1   ➺ ⦁Broadcast + All + Developed Code** ','**════════════**')
     .addField('     **❧ #help-js-bc-2  ➺ ⦁Broadcast + All + Not Developed Code** ','**════════════**')
     .addField('     **❧ #help-js-bc-3   ➺ ⦁Broadcast + for online only + With mention + Not Developed Code** ','**════════════**')
@@ -1197,7 +1197,7 @@ client.on('message', message => {
     if (message.content === "#help-js-admin") { 
     let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
-    .setTitle('**⦁All types of codes in Codes Server 💬⦁**')
+    .setTitle('**⦁All types of codes in __Codes__ Server 💬⦁**')
     .addField('     **❧ #help-js-admin-1   ➺ ⦁Ban Code** ','**════════════**')
     .addField('     **❧ #help-js-admin-2  ➺ ⦁Kick Code** ','**════════════**')
     .addField('     **❧ #help-js-admin-3   ➺ ⦁Clear chat Code** ','**════════════**')
