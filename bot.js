@@ -637,7 +637,7 @@ let embed = new Discord.RichEmbed()
 .setTitle('**─══════ {✯Choose✯} ══════─**')
 .addField('     **❧ #help-1 ➺ Codes list** ','**════════════**') //done
 .addField('     **❧ #help-2 ➺ General commands**','**════════════**') //done
-.addField('     **❧ #help-3 ➺ Music Commands**' ,'**════════════**') //done
+.addField('     **❧ #help-3 ➺ Music Commands __(Coming Soon)__**' ,'**════════════**') //done
 .addField('     **❧ #help-4 ➺ Management orders**' ,'**════════════**') //done
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
@@ -704,9 +704,9 @@ let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**⦁All types of codes in __Codes__ Server 💬⦁**')
 .addField('     **❧ #help-js ➺ JS codes list** ','**════════════**') //done 
-.addField('     **❧ #help-py ➺ PY codes list (Coming Soon)** ','**════════════**') //Not Ready yet!
-.addField('     **❧ #help-eris  ➺ ERIS  codes list (Coming Soon)** ','**════════════**') //Not Ready yet!
-.addField('     **❧ #help-io ➺ IO codes list (Coming Soon)** ','**════════════**') //Not Ready yet!
+.addField('     **❧ #help-py ➺ PY codes list __(Coming Soon)__** ','**════════════**') //Not Ready yet!
+.addField('     **❧ #help-eris  ➺ ERIS  codes list __(Coming Soon)__** ','**════════════**') //Not Ready yet!
+.addField('     **❧ #help-io ➺ IO codes list __(Coming Soon)__** ','**════════════**') //Not Ready yet!
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
