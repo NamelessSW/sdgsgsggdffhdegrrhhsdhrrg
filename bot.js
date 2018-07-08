@@ -613,22 +613,6 @@ if(!args[0]) return message.channel.send('Correct usage: **ks!reverse (text to r
     
 }
 });
-//rooms
-client.on('message', message => {
-    if (message.content === "#rooms") {
-        if (message.author.bot) return
-                      if (!message.guild) return;
-
-        var channels = message.guild.channels.map(channels => `${channels.name}, `).join(' ')
-        const embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .addField(`${message.guild.name}`,`**Codes Channels ✅**`)
-        .addField('⬇ Channels. ✔',`** ${message.guild.channels.size}**`)
-        
-.addField('⬇Channel name. ✔:',`**[${channels}]**`)
-        message.channel.sendEmbed(embed);
-    }
-});
 //help
 client.on('message', message => {
     if (message.content === "#help") {
@@ -657,7 +641,7 @@ let embed = new Discord.RichEmbed()
 .addField("**#member :hearts: **", "**Shows who everyone Status**")
 .addField("**#emoji :gem: **", "**Write your word in emoji**")
 .addField("**#flip :arrows_clockwise: **","**Flip your word**")
-.addField("**#rooms :1234: **","**Flip your word**")
+.addField("**#day :cloud: **","**Shows the date and the time**")
 .addField("**#MCskin :heart_eyes:  **", "**Shows your minecraft skin**")
 .addField("**#sug :notepad_spiral: **", "**Do #sug {Write your suggestion}**")
 .addField("**#report :pencil: **","**Report members**") 
